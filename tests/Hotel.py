@@ -1,4 +1,3 @@
-
 class Hotel:
     def __init__(self, Classificacao, TaxaRegSe, TaxaRewSe, TaxaRegFds, TaxaRewFds):
         self.clas = Classificacao
@@ -21,6 +20,8 @@ class Hotel:
 
     def getTaxRewFds(self):
         return self.TaxRewFds
+
+    #Métodos para retornar os valores a partir do tipo do cliente e de qual dia da semana#
 
     def ValorReg(self, data):
         if data in 'montueswedthurfri':

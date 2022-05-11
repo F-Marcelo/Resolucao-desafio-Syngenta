@@ -15,6 +15,15 @@ class MyTest(TestCase):
         result = "Ridgewood"
         self.assertEqual(result, get_cheapest_hotel("Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)"))
 
-    # def validate_empty_input(self):
+    #Teste criado para verificar se há entrada vazia#
+    def tests4(self):
+        result = 'Campos Obrigatórios.'
+        self.assertEqual(result, get_cheapest_hotel(""))
+
+    #Teste feito para verificar se os dias da semana são válidos#
+    def tests5(self):
+        result = 'Necessita-se dos dias da semana.'
+        self.assertEqual(result, get_cheapest_hotel("Rewards: 26Mar2009(teste), 27Mar2009(teste), 28Mar2009(teste)"))
+
 if __name__ == '__main__':
     unittest.main()
